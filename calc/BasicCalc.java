@@ -18,16 +18,22 @@ public class BasicCalc {
 		return subtractNumbers;
 	}
 	public static double  divideNumbers (double num1, double num2) {
-		double divideNumbers = num1 / num2;
-		System.out.println("Dividing these values gives you " + divideNumbers);
-		return divideNumbers;
+			if (num1 < num2) {
+				double divideNumbers = num1 / num2;
+				System.out.println("Dividing these values gives you " + divideNumbers);
+				return divideNumbers;
+			}
+			else
+		
+		System.out.println("Please ensure that the first number is smaller than the second.");
+			return 0;
 	}
 	
 
-public static void main(String[] args) {
-    addNumbers(1,1);
-    multiplyNumbers(1,1);
-    subtractNumbers(1,1);
-    divideNumbers(1,1);
-  }
+//public static void main(String[] args) {
+//    addNumbers(1,1);
+//    multiplyNumbers(1,1);
+//    subtractNumbers(1,1);
+//    divideNumbers(1,1);
+//  }
 }

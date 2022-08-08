@@ -13,10 +13,30 @@ public class Results {
 		System.out.println("TOTAL MARK : " + total);
 		
 	}
+	public Double PercentageOfIndividualMark(Double input) {
+		Double Mark;
+		Mark = (input *100) / 150;
+		return Mark;
+	}
 	
 	public void DisplayPercentage() {
 		percentage = (total * 100) / 450;
-		System.out.println("percentage: " + percentage);
+		if (percentage < 60) {
+			System.out.println("YOU FAILED");
+		} else if (PercentageOfIndividualMark(physics) < 60){
+			System.out.println("Failed physics");
+		}else if (PercentageOfIndividualMark(chemistry) < 60){
+			System.out.println("Failed chem");
+		}else if (PercentageOfIndividualMark(physics) < 60){
+			System.out.println("Failed biology");
+		} else
+		
+		System.out.println("you passed. percentage: " + percentage);
 	}
-}
+		
+	public void main(String[] args) {
+	    DisplayPercentage();
+	  }
+	}
+
 
