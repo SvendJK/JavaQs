@@ -1,9 +1,9 @@
 package calc;
 
 public class Results {
-	double physics = 110;
+	double physics = 20;
 	double chemistry= 130.5;
-	double biology =100;
+	double biology =20;
 	double total = 330.5;
 	double percentage ;
 	public void DisplayResult () {
@@ -27,15 +27,16 @@ public class Results {
 			System.out.println("Failed physics");
 		}else if (PercentageOfIndividualMark(chemistry) < 60){
 			System.out.println("Failed chem");
-		}else if (PercentageOfIndividualMark(physics) < 60){
+		}else if (PercentageOfIndividualMark(biology) < 60){
 			System.out.println("Failed biology");
 		} else
 		
 		System.out.println("you passed. percentage: " + percentage);
 	}
 		
-	public void main(String[] args) {
-	    DisplayPercentage();
+	public static void main(String[] args) {
+	    Results results = new Results();	
+	    results.DisplayPercentage();
 	  }
 	}
 
