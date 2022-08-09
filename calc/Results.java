@@ -1,4 +1,5 @@
 package calc;
+import java.math.*;
 
 public class Results {
 	double physics = 20;
@@ -37,7 +38,67 @@ public class Results {
 	public static void main(String[] args) {
 	    Results results = new Results();	
 	    results.DisplayPercentage();
+	    results.bigflowchart(4000);
+	    results.blackjack(22,23);
 	  }
+	
+	public static int flowchart(int one, int two, boolean b) {
+	if (b=true) {
+	return one+two;
+	}else {
+	return one*two;
+	}	
+}
+	public  void bigflowchart(int a) {
+	if(a>2000) {
+		System.out.println("A");
+		if (a>6000){
+		System.out.println("C");
+		}else {
+		System.out.println("B");
+		if(a>4000){
+			System.out.println("D");
+			
+		}else {
+			System.out.println("E");
+		}
+		}
+	}else {
+		System.out.println("1");
+		if(a>100) {
+			System.out.println("3");
+				if(a>600) {
+					System.out.println("5");
+				} else {
+					System.out.println("4");
+						if(a>500) {
+							System.out.println("6");
+						} else {
+							System.out.println("7");
+						}
+				}
+		} else {
+			System.out.println("2");
+		}
+		}
 	}
-
-
+	
+	public int blackjack(int a, int b) {
+		if(a <=0 || b <=0) {
+			System.out.println("PLease enter valid numbers");
+		} else if(a>21 && b>21) {
+			System.out.println("0");
+			return 0;
+			
+		
+		}else {
+		System.out.println(Math.max(a,b));
+		return Math.max(a,b);
+		}
+		return 0;
+		
+		
+	}
+	
+	
+}
