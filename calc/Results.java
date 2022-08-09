@@ -40,9 +40,10 @@ public class Results {
 	    results.DisplayPercentage();
 	    results.bigflowchart(4000);
 	    results.blackjack(22,23);
+	    results.uniquesum(22,23,22);
 	  }
 	
-	public static int flowchart(int one, int two, boolean b) {
+	private static int flowchart(int one, int two, boolean b) {
 	if (b=true) {
 	return one+two;
 	}else {
@@ -99,6 +100,26 @@ public class Results {
 		
 		
 	}
+	public int uniquesum(int a, int b, int c) {
+		if (a==b){
+			a=0;
+		    b=0;
+		    System.out.println(a+b+c);
+		    return a+b+c;
+		} else if (b==c){
+			b=0;
+		    c=0;
+		    System.out.println(a+b+c);
+		    return a+b+c;
+		}else if (c==a){
+			c=0;
+		    a=0;
+		    System.out.println(a+b+c);
+		    return a+b+c;
+		} else {
+			System.out.println(a+b+c);
+			return a+b+c;
+		}
 	
-	
+}
 }
